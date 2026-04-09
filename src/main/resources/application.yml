@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: sql2entity
+  freemarker:
+    template-loader-path: classpath:/templates
+    suffix: .ftl
+
+# Swagger API文档配置
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  group-configs:
+    - group: 'sql2entity'
+      paths-to-match: '/api/**'
+      packages-to-scan: com.sql2entity.controller
+
+# 日志配置
+logging:
+  level:
+    com.sql2entity: DEBUG
