@@ -2,7 +2,7 @@ FROM eclipse-temurin:11-jre-alpine
 
 WORKDIR /app
 
-COPY target/sql2entity-1.0.0.jar app.jar
+COPY sql2entity-1.0.0.jar app.jar
 
 EXPOSE 8080
 
